@@ -49,7 +49,7 @@ if exist "Build" rmdir /s /q "Build"
 if exist "AssetRegistryCache" rmdir /s /q "AssetRegistryCache"
 if exist "ReimportCache" rmdir /s /q "ReimportCache"
 if exist "ProjectFiles" rmdir /s /q "ProjectFiles"
-if exist "*.bin" del /s "*.bin"
+if exist "*.bin" del /s /q "*.bin"
 )
 if %CLRASTCACHE%==0 (
 echo [STATUS] Clear: Old source cache ...
