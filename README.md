@@ -8,8 +8,8 @@ Clear Unreal project assets registry cache data. This batch file will be clear p
 
 How to use?
 
-1. Place this file in your project root path.
-2. Edit it if u want. (Read below)
+1. Place tbatch file in your project root path.
+2. Edit it if you want. (Read below)
 3. Run batch file and wait.
 
 [Parameters letters: 1 - Enabled | 0 - Disabled]
