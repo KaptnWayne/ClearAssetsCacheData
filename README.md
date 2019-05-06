@@ -15,6 +15,7 @@ How to use?
 [Parameters letters: 1 - Enabled | 0 - Disabled]
 
 ##!! Switch CLRASTCACHE property to clear fully assets register cache.
+
 [Used for C++ projects, Default=1] When this parameter is '0' will be cleared only old source files cache data (*.vsxproj, *.vsxproj.filters). If u want clear only old source files data keep this parameter by disabled.
 
 ##!! [Used for C++ projects, Default=1] Switch USEGENBIN to generating project files for Visual Studio automatically.
