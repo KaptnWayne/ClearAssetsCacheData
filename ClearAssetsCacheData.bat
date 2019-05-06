@@ -96,7 +96,7 @@ goto End
 
 :EndDone
 echo.
-call:ECHODONE "[STATUS] DONE. Wait for a keypress before quitting.
+call:ECHODONE "[STATUS] DONE. Wait for a keypress before quitting."
 goto End
 
 rem Colored status message
