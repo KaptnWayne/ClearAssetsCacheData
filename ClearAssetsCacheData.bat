@@ -18,7 +18,7 @@ rem ## Get latest actual version on https://github.com/KaptnWayne/ClearAssetsCac
 cls
 echo Clear project assets data ...
 
-rem ## Check is bat file is in project root path; get project file name.
+rem ## Check is batch file is in project root path; get project file name.
 echo.
 pushd "%~dp0\"
 for /f  %%a in ('dir /b *.uproject 2^>nul') do (
@@ -80,7 +80,6 @@ if ERRORLEVEL 1 goto EndError
 
 if %DOSILENCE%==1 goto exit
 goto EndDone
-
 
 
 rem ## STATUS SECTIONS
