@@ -21,7 +21,7 @@ echo Clear project assets data ...
 rem ## Check is bat file is in project root path; get project file name.
 echo.
 pushd "%~dp0\"
-for /f  %%a in ('dir /b *.uproject') do (
+for /f  %%a in ('dir /b *.uproject 2^>nul') do (
 set PRJNAME=%%~na
 set NAME=%%~nxa
 )
