@@ -1,7 +1,6 @@
 @echo off
 setlocal
 
-
 rem ##!! [Used for C++ projects, Default=0] Switch to clear fully assets register cache.
 rem ## When disabling will be cleared only old source files cache data (*.vsxproj, *.vsxproj.filters)
 set CLRASTCACHE=0
@@ -15,7 +14,7 @@ set DOSILENCE=0
 
 :start
 cls
-echo Clear all assets data ...
+echo Clear project assets data ...
 
 rem ## Check is bat file is in project root path; get project file name.
 echo.
@@ -86,18 +85,15 @@ rem ## STATUS SECTIONS
 :Error_MissingProjectRootPath
 echo.
 echo Failed to find ProjectName.uproject file. Place bat file into your Project root path and try again.
-goto EndError
 
 
 :EndError
 echo.
 call:ECHOERROR "[STATUS] ERORR. Wait for a keypress before quitting."
-goto End
 
 :EndDone
 echo.
 call:ECHODONE "[STATUS] DONE. Wait for a keypress before quitting."
-goto End
 
 rem Colored status message
 :ECHOERROR
