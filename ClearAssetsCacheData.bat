@@ -65,7 +65,7 @@ if ERRORLEVEL 1 goto EndError
 
 rem ## Generate VS Project files.
 rem Skip generate VS project files
-if %USEGENBIN%==0 goto Done
+if %USEGENBIN%==0 goto EndDone
 
 :GenerateVSProjectFiles
 echo.
