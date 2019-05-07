@@ -57,7 +57,6 @@ echo [STATUS] Clear: Old source cache ...
 pushd "%~dp0/Intermediate/ProjectFiles/"
 if exist "%PRJNAME%.vcxproj" del /s /q "%PRJNAME%.vcxproj"
 if exist "%PRJNAME%.vcxproj.filters" del /s /q "%PRJNAME%.vcxproj.filters"
-if exist "%PRJNAME%.vcxproj.filters" del /s /q "%PRJNAME%.vcxproj.filters"
 )
 popd
 if ERRORLEVEL 1 goto EndError
