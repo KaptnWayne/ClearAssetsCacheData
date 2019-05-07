@@ -80,30 +80,23 @@ if %DOSILENCE%==1 goto exit
 goto EndDone
 
 
+
 rem ## STATUS SECTIONS
 
 :Error_MissingProjectRootPath
 echo.
-echo Failed to find ProjectName.uproject file. Place bat file into your Project root path and try again.
-
+%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red "Failed to find ProjectName.uproject file. Place bat file into your Project root path and try again."
 
 :EndError
 echo.
-call:ECHOERROR "[STATUS] ERORR. Wait for a keypress before quitting."
-
-:EndDone
-echo.
-call:ECHODONE "[STATUS] DONE. Wait for a keypress before quitting."
-
-rem Colored status message
-:ECHOERROR
-%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red %1
+%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red "[STATUS] ERORR. Wait for a keypress before quitting."
 echo.
 pause
 goto exit
 
-:ECHODONE
-%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Green %1
+:EndDone
+echo.
+%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Green "[STATUS] DONE. Wait for a keypress before quitting."
 echo.
 pause
 goto exit
