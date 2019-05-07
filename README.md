@@ -20,5 +20,5 @@ How to use?
 
 ##!! [Used for C++ projects, Default=1] Switch USEGENBIN to generating project files for Visual Studio automatically.
 
-## Enable DOSILENCE=1 for close window automatically with end of process if is has done.
+##!! Enable DOSILENCE=1 for close window automatically with end of process if is has done.
 
