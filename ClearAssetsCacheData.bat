@@ -10,6 +10,7 @@ set USEGENBIN=1
 
 rem ## When enabled window will be closed  automatically with end of process if is has done.
 set DOSILENCE=0
+rem ## Get latest actual version on https://github.com/KaptnWayne/ClearAssetsCacheData
 
 
 :start
