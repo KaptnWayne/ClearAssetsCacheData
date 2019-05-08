@@ -73,6 +73,7 @@ rem Get genproj execution bat file using registry cache.
 rem Skip fist 2 tokens (Name'Icon',Type'REG_SZ') and get Data only.
 for /f "skip=2 tokens=2,*" %%A in ('reg query "HKCR\Unreal.ProjectFile\shell\rungenproj" /v "Icon"') do SET GENBIN=%%B
 rem Run genbin file for "NAME.uproject".
+if not exist %GENBIN% goto Error_MissingUnrealEngineVersion
 %GENBIN% /projectfiles "%~dp0\%NAME%"
 rem Get GENBIN process status.
 if ERRORLEVEL 1 goto EndError
@@ -86,6 +87,10 @@ rem ## STATUS SECTIONS
 :Error_MissingProjectRootPath
 echo.
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red "Failed to find ProjectName.uproject file. Place bat file into your Project root path and try again."
+goto EndError
+
+:Error_MissingUnrealEngineVersion
+%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red "Failed to find some Unreal Engine version."
 
 :EndError
 echo.
